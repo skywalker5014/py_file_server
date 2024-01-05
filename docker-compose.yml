@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+
+  database:
+    image: postgres
+    container_name: pgsqlCompose
+    networks:
+      - myNet
+    environment:
+      - POSTGRES_PASSWORD=tintintin
+      - POSTGRES_DB=db
+
+  backend:
+    image: py_file_server
+    container_name: serverCompose
+    networks:
+      - myNet
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - SECRET_KEY=qwerty123
+      - HOST=0.0.0.0
+      - DATABASE_LINK=postgresql://postgres:tintintin@pgsqlCompose:5432/db
+      - TZ=Asia/Kolkata
+    depends_on:
+      - database
+
+  frontend:
+    image: py_frontend
+    container_name: pyuiCompose
+    networks:
+      - myNet
+    ports:
+      - "5000:5000"
+    depends_on:
+      - backend
+
+networks:
+  myNet:
+    external: true
