@@ -1,6 +1,10 @@
 ### file server app
 This is a webapplication where users can upload files to a server with expiry or time to live feature and share those files among other users. 
 
+#### project architecture: 
+![Sample Image](https://github.com/skywalker5014/py_file_server/raw/main/path/to/your/image.png)
+
+
 ##### steps to run the project:
 #### run locally:
 "make sure you have python, pip, nodejs, npm and postgresql already installed on your device"
