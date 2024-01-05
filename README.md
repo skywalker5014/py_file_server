@@ -2,7 +2,6 @@
 This is a webapplication where users can upload files to a server with expiry or time to live feature and share those files among other users. 
 
 #### project architecture: 
-![project architecture model](https://github.com/skywalker5014/py_file_server/raw/main/application_architecture.png)
 link to project architecture model diagram: https://drive.google.com/file/d/1uGEyxN6RxBTNXto5Kduu_3WC7qJL_a7H/view?usp=drive_link
 link to project demo video : https://drive.google.com/file/d/1WkTjxu4YKNMOrNbYnfLqqeCNwi0mDxKY/view?usp=drive_link
 
